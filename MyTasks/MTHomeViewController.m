@@ -19,7 +19,7 @@
 #import "Folder+CoreDataProperties.h"
 #import "Folder+CoreDataClass.h"
 
-@interface MTHomeViewController ()<UITabBarControllerDelegate>
+@interface MTHomeViewController ()<UITabBarControllerDelegate, MGSwipeTableCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
 @property (weak, nonatomic) IBOutlet UILabel *emptyLabel;
@@ -54,6 +54,23 @@
         MTCurrentTasksViewController *vc = segue.destinationViewController;
         vc.folder = (MTFolder *)sender;
     }
+}
+
+
+-(BOOL) swipeTableCell:(MGSwipeTableCell*) cell tappedButtonAtIndex:(NSInteger) index direction:(MGSwipeDirection)direction fromExpansion:(BOOL) fromExpansion {
+    
+    if(direction == MGSwipeDirectionRightToLeft && fromExpansion == YES) {
+        CGPoint cellPosition = [cell convertPoint:CGPointZero toView:self.homeTableView];
+        NSIndexPath *indexPath = [self.homeTableView indexPathForRowAtPoint:cellPosition];
+        
+        [DataManager removeFolder:self.folders[indexPath.row]];
+        self.folders = [DataManager getFolders];
+        //    [self.homeTableView reloadData];
+        
+        [self.homeTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        self.emptyLabel.hidden = !([MTTasksHolder holder].folders.count == 0);
+    }
+    return NO;
 }
 
 #pragma mark - TabBarControllerDelegate
@@ -104,8 +121,9 @@
     cell.rightButtons = @[[MGSwipeButton buttonWithTitle:@"Remove" icon:[UIImage imageNamed:@"check.png"] backgroundColor:[UIColor redColor]]];
     [(UIButton *)cell.rightButtons[0] addTarget:self action:@selector(removeFolder:) forControlEvents:UIControlEventTouchDown];
     
-    cell.leftExpansion.buttonIndex = 0;
-    //cell.leftExpansion.fillOnTrigger = YES;
+    cell.rightExpansion.buttonIndex = 0;
+    cell.rightExpansion.fillOnTrigger = YES;
+    cell.delegate = self;
     
     return cell;
 }
@@ -149,7 +167,7 @@
     self.folders = [DataManager getFolders];
 //    [self.homeTableView reloadData];
     
-    [self.homeTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    [self.homeTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
     self.emptyLabel.hidden = !([MTTasksHolder holder].folders.count == 0);
 }
 

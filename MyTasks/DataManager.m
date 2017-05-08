@@ -91,7 +91,6 @@
     
     NSUInteger count = 0;
     for(Task* task in folder.tasks) {
-        NSLog(@"%@ %@",task.name , task.date.description);
         if ([self isSameDay:task.date otherDay:date]) {
             count += 1;
         }

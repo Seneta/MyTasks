@@ -10,6 +10,7 @@
 #import "MTTasksHolder.h"
 
 @interface MTCustomizeTaskViewController ()<UITextViewDelegate>
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *priorityButtons;
 
 @end
 
@@ -22,6 +23,15 @@
     //for hiding keyboard
     [self.titleTextField setReturnKeyType:UIReturnKeyDone];
     [self.descriptionsTextView setReturnKeyType:UIReturnKeyDone];
+    
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_GB"];
+    [self.datePicker setLocale:locale];
+    self.datePicker.layer.cornerRadius = 4;
+    self.datePicker.layer.borderWidth = 0.5;
+    self.datePicker.layer.borderColor = [[UIColor colorWithRed:205.0/255.0 green:205.0/255.0 blue:205.0/255.0 alpha:1] CGColor];
+    self.descriptionsTextView.layer.borderColor = [[UIColor colorWithRed:205.0/255.0 green:205.0/255.0 blue:205.0/255.0 alpha:1] CGColor];
+    self.descriptionsTextView.layer.borderWidth = 0.5f;
+    self.descriptionsTextView.layer.cornerRadius = 4;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
@@ -38,8 +48,18 @@
 - (void)viewWillAppear:(BOOL)animated {
     self.titleTextField.text = self.task.name;
     self.descriptionsTextView.text = self.task.descriptions;
-    
     [self.datePicker setDate:self.task.date ? self.task.date: [NSDate date]];
+    
+    for(UIButton* button in self.priorityButtons) {
+        if(self.task.priority.intValue == button.tag) {
+            [button setSelected:YES];
+            button.alpha = 1;
+        }
+        else {
+            [button setSelected:NO];
+            button.alpha = 0.3;
+        }
+    }
 }
 
 #pragma mark Methods
@@ -67,6 +87,17 @@
 
 #pragma mark IBActions
 
+- (IBAction)pressPriorityButton:(UIButton*)sender {
+    for(UIButton* button in self.priorityButtons) {
+        [button setSelected:NO];
+        button.alpha = 0.3;
+    }
+    
+    [sender setSelected:YES];
+    sender.alpha = 1;
+}
+
+
 - (IBAction)pressedCloseButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -75,8 +106,13 @@
     self.task.name = self.titleTextField.text;
     self.task.descriptions = self.descriptionsTextView.text;
     self.task.date = self.datePicker.date;
-    NSLog(@"%u", self.task.priority);
-    [self.task setPriority:[NSNumber numberWithInt:1]];// = INT32_C(1);
+    
+    for(UIButton* button in self.priorityButtons) {
+        if ([button isSelected]) {
+            [self.task setPriority:[NSNumber numberWithInt:button.tag]];
+            break;
+        }
+    }
     
     [CoreDataStack.sharedStack saveContext];
     

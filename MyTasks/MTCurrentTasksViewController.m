@@ -16,7 +16,7 @@
 #import "MTTask.h"
 #import "CoreDataStack.h"
 
-@interface MTCurrentTasksViewController ()<UITabBarControllerDelegate>
+@interface MTCurrentTasksViewController ()<UITabBarControllerDelegate, MGSwipeTableCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *emptyLabel;
@@ -30,6 +30,7 @@
     
     self.navigationItem.title = self.folder.name;
     self.emptyLabel.hidden = !(self.folder.tasks.count == 0);
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad {
@@ -68,7 +69,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60.0;
+    return 80.0;
 }
 
 /*- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -94,19 +95,61 @@
     
     Task *task = self.folder.tasks[indexPath.row];
     cell.titleLabel.text = task.name;
-    cell.deadlineDateLabel.text = [task.date description];
+    
+    // Some output format (adjust to your needs):
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    [fmt setDateFormat:@"HH:mm   dd.MM.YYYY"];
+    cell.deadlineDateLabel.text = [fmt stringFromDate:task.date];
+    cell.delegate = self;
+    
+    NSLog(@"%u",task.priority.intValue);
+    switch (task.priority.intValue) {
+        case 0:
+            cell.priorityImageView.image = [UIImage imageNamed:@"priority1"];
+            break;
+        case 1:
+            cell.priorityImageView.image = [UIImage imageNamed:@"priority2"];
+            break;
+        case 2:
+            cell.priorityImageView.image = [UIImage imageNamed:@"priority3"];
+            break;
+        default:
+            break;
+    }
+    
     
     cell.rightButtons = @[[MGSwipeButton buttonWithTitle:@"Remove" icon:[UIImage imageNamed:@"check.png"] backgroundColor:[UIColor redColor]]];
     cell.leftButtons = @[[MGSwipeButton buttonWithTitle:@"Done" backgroundColor:[UIColor blueColor]]];
-    [(UIButton *)cell.rightButtons[0] addTarget:self action:@selector(removeTask:) forControlEvents:UIControlEventTouchDown];
-    [(UIButton *)cell.leftButtons[0] addTarget:self action:@selector(completeTask:) forControlEvents:UIControlEventTouchDown];
+//    [(UIButton *)cell.rightButtons[0] addTarget:self action:@selector(removeTask:) forControlEvents:UIControlEventTouchDown];
+//    [(UIButton *)cell.leftButtons[0] addTarget:self action:@selector(completeTask:) forControlEvents:UIControlEventTouchDown];
     
     cell.leftExpansion.buttonIndex = 0;
-    //cell.leftExpansion.fillOnTrigger = YES;
+    cell.leftExpansion.fillOnTrigger = YES;
     
     cell.rightExpansion.buttonIndex = 0;
-    //cell.rightExpansion.fillOnTrigger = YES;
+    cell.rightExpansion.fillOnTrigger = YES;
     return cell;
+}
+
+-(BOOL) swipeTableCell:(MGSwipeTableCell*) cell tappedButtonAtIndex:(NSInteger) index direction:(MGSwipeDirection)direction fromExpansion:(BOOL) fromExpansion {
+    if(direction == MGSwipeDirectionLeftToRight && fromExpansion == YES) {
+        CGPoint cellPosition = [cell convertPoint:CGPointZero toView:self.tableView];
+        NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:cellPosition];
+        [self.folder removeTasksObject:self.folder.tasks[indexPath.row]];
+        [CoreDataStack.sharedStack saveContext];
+        self.emptyLabel.hidden = !(self.folder.tasks.count == 0);
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+    }
+    
+    if(direction == MGSwipeDirectionRightToLeft && fromExpansion == YES) {
+        CGPoint cellPosition = [cell convertPoint:CGPointZero toView:self.tableView];
+        NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:cellPosition];
+        [self.folder removeTasksObject:self.folder.tasks[indexPath.row]];
+        [CoreDataStack.sharedStack saveContext];
+        self.emptyLabel.hidden = !(self.folder.tasks.count == 0);
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    }
+    return NO;
 }
 
 #pragma mark - UITableView Delegate
@@ -131,6 +174,7 @@
         NSEntityDescription* entity = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:context];
         Task* task = [[Task alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
         task.name = alertController.textFields[0].text;
+        task.priority = [NSNumber numberWithInt:0];
         [self.folder addTasksObject:task];
         [CoreDataStack.sharedStack saveContext];
         
@@ -151,7 +195,7 @@
     [self.folder removeTasksObject:self.folder.tasks[indexPath.row]];
     [CoreDataStack.sharedStack saveContext];
     self.emptyLabel.hidden = !(self.folder.tasks.count == 0);
-    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
 }
 
 - (void)completeTask:(id)sender {
@@ -161,7 +205,7 @@
     [self.folder removeTasksObject:self.folder.tasks[indexPath.row]];
     [CoreDataStack.sharedStack saveContext];
     self.emptyLabel.hidden = !(self.folder.tasks.count == 0);
-    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
 }
 
 @end
