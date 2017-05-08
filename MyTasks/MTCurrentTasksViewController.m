@@ -14,6 +14,7 @@
 #import "MTCustomizeTaskViewController.h"
 #import "MTTasksHolder.h"
 #import "MTTask.h"
+#import "CoreDataStack.h"
 
 @interface MTCurrentTasksViewController ()<UITabBarControllerDelegate>
 
@@ -27,7 +28,7 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.navigationItem.title = self.folder.title;
+    self.navigationItem.title = self.folder.name;
     self.emptyLabel.hidden = !(self.folder.tasks.count == 0);
 }
 
@@ -91,13 +92,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TaskCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TasksHeaderCell"];
     
-    MTTask *task = self.folder.tasks[indexPath.row];
-    cell.titleLabel.text = task.title;
-    cell.deadlineDateLabel.text = [task.deadlineDate description];
+    Task *task = self.folder.tasks[indexPath.row];
+    cell.titleLabel.text = task.name;
+    cell.deadlineDateLabel.text = [task.date description];
     
     cell.rightButtons = @[[MGSwipeButton buttonWithTitle:@"Remove" icon:[UIImage imageNamed:@"check.png"] backgroundColor:[UIColor redColor]]];
     cell.leftButtons = @[[MGSwipeButton buttonWithTitle:@"Done" backgroundColor:[UIColor blueColor]]];
     [(UIButton *)cell.rightButtons[0] addTarget:self action:@selector(removeTask:) forControlEvents:UIControlEventTouchDown];
+    [(UIButton *)cell.leftButtons[0] addTarget:self action:@selector(completeTask:) forControlEvents:UIControlEventTouchDown];
     
     cell.leftExpansion.buttonIndex = 0;
     //cell.leftExpansion.fillOnTrigger = YES;
@@ -125,9 +127,13 @@
      }];
     
     UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        NSDictionary *taskDict = @{@"title": alertController.textFields.lastObject.text};
-        MTTask *newTask = [[MTTask alloc] initWithDictionary:taskDict];
-        [self.folder addTask:newTask];
+        NSManagedObjectContext* context = CoreDataStack.sharedStack.managedObjectContext;
+        NSEntityDescription* entity = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:context];
+        Task* task = [[Task alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
+        task.name = alertController.textFields[0].text;
+        [self.folder addTasksObject:task];
+        [CoreDataStack.sharedStack saveContext];
+        
         self.emptyLabel.hidden = !(self.folder.tasks.count == 0);
         [self.tableView reloadData];
     }];
@@ -142,8 +148,18 @@
 - (void)removeTask:(id)sender {
     CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
-    
-    [self.folder removeTask:(int)indexPath.row];
+    [self.folder removeTasksObject:self.folder.tasks[indexPath.row]];
+    [CoreDataStack.sharedStack saveContext];
+    self.emptyLabel.hidden = !(self.folder.tasks.count == 0);
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+}
+
+- (void)completeTask:(id)sender {
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+    [DataManager completeTask:self.folder.tasks[indexPath.row]];
+    [self.folder removeTasksObject:self.folder.tasks[indexPath.row]];
+    [CoreDataStack.sharedStack saveContext];
     self.emptyLabel.hidden = !(self.folder.tasks.count == 0);
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }

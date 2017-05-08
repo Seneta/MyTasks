@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MTFolder.h"
+#import "DataManager.h"
 
 @interface MTCurrentTasksViewController : UIViewController
 
-@property (strong, nonatomic) MTFolder *folder;
+@property (strong, nonatomic) Folder *folder;
 
 @end

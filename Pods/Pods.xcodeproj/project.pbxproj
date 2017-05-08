@@ -7,67 +7,166 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0965F532B1D323B1DD073186EB650607 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA923EAEA5C4FFFFBC8E8843C6539702 /* MGSwipeTableCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		627C702143DC5871810C774521DF7D6D /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E0C5123199A67D47DA40878E8D065D /* MGSwipeButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6A2FAEE0D4C8299A6C1179A4C17BFD5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		6C6F002C4ACEDC5BF1FCCEAE4E47A48D /* MGSwipeTableCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB35DFBB35E354C08AE1296274D69E /* MGSwipeTableCell-dummy.m */; };
-		9C591574031C5736D5717DAE572FC359 /* MGSwipeButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A736648428FBA6B1B9CDF790D44D92 /* MGSwipeButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C1647891DE6F4562B67B7CD4AD6F0B3E /* Pods-MyTasks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 843529BBF61326EAF17DA401FF261DA7 /* Pods-MyTasks-dummy.m */; };
-		CFE557E5D4945FFFC747CA9C6F07B74D /* MGSwipeTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CA859C4ED79F1339EAFA84D8A82C06B5 /* MGSwipeTableCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7858FD0E9F489F2045B9BD691A105A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		1656E4B979886F4721143BD5FBF009BA /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D516FBACB05331AE92C391413B673 /* BEMLine.m */; };
+		22C4174CE6682E4C139FC28C6C7A7970 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		31F7C87CF21A10C5733C6B170501C43D /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BBE5059B37927848408D46C4BAEC6 /* MGSwipeButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		33A0C42E7148852D211F6014C4B05C96 /* MGSwipeButton.h in Headers */ = {isa = PBXBuildFile; fileRef = DD3EC6BEA35D85C60987C38804381C13 /* MGSwipeButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35D6B2732DAC3A9110264BD02093CB9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		45E321B940E640855F9BD8FE01AB2B45 /* JYGraphPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C5C1B46A90536E3DE25F7184FB7DB05 /* JYGraphPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4850AF5F4CA6F0AF6D019E81C8736EB2 /* BEMLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 5804F32551BF719D48D8864297A7B4BF /* BEMLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53025A424539BFB9F57B47DE5572AEEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5449C7A9E6C4A0BAF7F8953C38AFB375 /* BEMPermanentPopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = BECFB49A9E1DD8910968A1CBF6E9067C /* BEMPermanentPopupView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6509E74B78C608D91D517578A5902C54 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE55D1C964CCB31097EDEFB5E838A493 /* MGSwipeTableCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7B1F1EC42CDFB82378AF009322011B2B /* Pods-MyTasks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 843529BBF61326EAF17DA401FF261DA7 /* Pods-MyTasks-dummy.m */; };
+		867815EEDD60DBF7C1A91DCA2C452653 /* BEMSimpleLineGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB1C11948B9BBD6529421F36B90DEE1 /* BEMSimpleLineGraphView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99BA83D0022A68864DC669BBB680928B /* MGSwipeTableCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEE8DEB7285E40279D791EB6610F40C /* MGSwipeTableCell-dummy.m */; };
+		A9C3D307358C2999F57EE7618D819C26 /* BEMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D2C3C81F0232066831EF6F371255CD /* BEMCircle.m */; };
+		BF987E16E146ACC52EA930F005835981 /* BEMAverageLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E42D2034F2BFB94EA964A7E9784D3CD /* BEMAverageLine.m */; };
+		C0C0F91F3C8F4E0B825441E1E385DC11 /* JYGraphView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C509CC00F4F6CBC9E918C1C19E85C47F /* JYGraphView-dummy.m */; };
+		C4EC6A8E94207C5B17FC1E5F74178DB7 /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED280FEE0C55D7E8B419842D53B8603D /* BEMSimpleLineGraphView.m */; };
+		CFAB562865885A2260B53B6966C6A5EA /* BEMSimpleLineGraph-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE21B429A66B18617848E5340743333 /* BEMSimpleLineGraph-dummy.m */; };
+		D436147F9A52832585AC0A4F155003E0 /* JYGraphPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFC9634841FA170B7A9A24A0A3B30B7 /* JYGraphPoint.m */; };
+		D5C0A6209B3F54071227ED407510E76A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		D7917C62BF6774A604055CE3B1642FBC /* JYGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = C6760A8B0F528BAD28436E43508EAFBC /* JYGraphView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1C6FC011E7DBF2EDE14C09073F88282 /* JYGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11F91594928070E73A600F5E022937 /* JYGraphView.m */; };
+		E1CDB62E948DFB819A89EEB26FAEBED8 /* BEMCircle.h in Headers */ = {isa = PBXBuildFile; fileRef = 191108FF7AC6D6E75F50CDDCD20DFC3B /* BEMCircle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F47CC8CFF26A311ADE7987B50729EDEE /* MGSwipeTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AAEA64577709157E74D561A2654EC31 /* MGSwipeTableCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7C729E1EA0EA97AB45B866C9AF21301 /* BEMAverageLine.h in Headers */ = {isa = PBXBuildFile; fileRef = F22E9F0EEE8FD98093687D3D2B1F2CD4 /* BEMAverageLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9D31053190166EB68C4015A91E01E2C /* BEMPermanentPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE795136AA8A52BB55BA165ABDE179C0 /* BEMPermanentPopupView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E223867371A016045758619E63FE95CB /* PBXContainerItemProxy */ = {
+		5AEAE2AD3788516332B81BDFDD759708 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8C463CD491D989B457394A7AA95384BC;
+			remoteGlobalIDString = 43AFBF4F2CD231A7499E3B7813A16837;
 			remoteInfo = MGSwipeTableCell;
+		};
+		5D55ED732461BD40D38697D8C745E47D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2072D1DF5BFD9E8B5826A6936EED91A9;
+			remoteInfo = BEMSimpleLineGraph;
+		};
+		8FFE579BDBCDF501638FD4A918BE5414 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD303CE3EC4B5E86F8D14C5DD2464FDF;
+			remoteInfo = JYGraphView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		05ABA2F4F9D780241BD4765C66B09B4B /* Pods-MyTasks-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyTasks-frameworks.sh"; sourceTree = "<group>"; };
-		0FB1DAA2E863F06F9BB727508397DB8A /* libMGSwipeTableCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMGSwipeTableCell.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EB936933FEA7B0AB23150E5949ED4A4 /* libBEMSimpleLineGraph.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libBEMSimpleLineGraph.a; path = libBEMSimpleLineGraph.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		191108FF7AC6D6E75F50CDDCD20DFC3B /* BEMCircle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMCircle.h; path = Classes/BEMCircle.h; sourceTree = "<group>"; };
+		1AE21B429A66B18617848E5340743333 /* BEMSimpleLineGraph-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BEMSimpleLineGraph-dummy.m"; sourceTree = "<group>"; };
 		25E5FE868D865D98721904260491BEAE /* Pods-MyTasks-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyTasks-acknowledgements.markdown"; sourceTree = "<group>"; };
-		54E6590A1C83254E44DAD862184EE3F0 /* MGSwipeTableCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MGSwipeTableCell-prefix.pch"; sourceTree = "<group>"; };
-		72A5E3EDDF4E6B2C3F0A26660B17E67A /* libPods-MyTasks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyTasks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		74A736648428FBA6B1B9CDF790D44D92 /* MGSwipeButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeButton.h; path = MGSwipeTableCell/MGSwipeButton.h; sourceTree = "<group>"; };
+		2749E57F85B07AFBBE14E85D99739275 /* BEMSimpleLineGraph.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BEMSimpleLineGraph.xcconfig; sourceTree = "<group>"; };
+		289D2EFC25A2EE707BDDFDA418FA6C6B /* MGSwipeTableCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MGSwipeTableCell-prefix.pch"; sourceTree = "<group>"; };
+		28D3389605E9C863EFF2FFC99A1F9BDB /* MGSwipeTableCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MGSwipeTableCell.xcconfig; sourceTree = "<group>"; };
+		2E42D2034F2BFB94EA964A7E9784D3CD /* BEMAverageLine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMAverageLine.m; path = Classes/BEMAverageLine.m; sourceTree = "<group>"; };
+		3093F19BAB5AD583A993C64C7EAC4976 /* JYGraphView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JYGraphView.xcconfig; sourceTree = "<group>"; };
+		4AAEA64577709157E74D561A2654EC31 /* MGSwipeTableCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeTableCell.h; path = MGSwipeTableCell/MGSwipeTableCell.h; sourceTree = "<group>"; };
+		5804F32551BF719D48D8864297A7B4BF /* BEMLine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMLine.h; path = Classes/BEMLine.h; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6981B8F3651D943A2A89937D6AED5513 /* BEMSimpleLineGraph-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BEMSimpleLineGraph-prefix.pch"; sourceTree = "<group>"; };
+		70698B6159DBBF2DE874ECF24045627B /* JYGraphView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JYGraphView-prefix.pch"; sourceTree = "<group>"; };
 		843529BBF61326EAF17DA401FF261DA7 /* Pods-MyTasks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyTasks-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8842CA00E7D08A291BD1EFDE9EF8482A /* libPods-MyTasks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MyTasks.a"; path = "libPods-MyTasks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E5D516FBACB05331AE92C391413B673 /* BEMLine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMLine.m; path = Classes/BEMLine.m; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		979DE30D754C99C6D343671693BAC501 /* Pods-MyTasks-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyTasks-acknowledgements.plist"; sourceTree = "<group>"; };
-		98E0C5123199A67D47DA40878E8D065D /* MGSwipeButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeButton.m; path = MGSwipeTableCell/MGSwipeButton.m; sourceTree = "<group>"; };
+		9C5C1B46A90536E3DE25F7184FB7DB05 /* JYGraphPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JYGraphPoint.h; path = JYGraphViewDemoProject/JYGraphViewDemoProject/JYGraphPoint.h; sourceTree = "<group>"; };
 		A628196A8BDD1DC41FC04434B36F3CA8 /* Pods-MyTasks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyTasks.release.xcconfig"; sourceTree = "<group>"; };
+		ADEE8DEB7285E40279D791EB6610F40C /* MGSwipeTableCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MGSwipeTableCell-dummy.m"; sourceTree = "<group>"; };
+		AE55D1C964CCB31097EDEFB5E838A493 /* MGSwipeTableCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeTableCell.m; path = MGSwipeTableCell/MGSwipeTableCell.m; sourceTree = "<group>"; };
 		B4FA0031DD40F24BED4D58E39773C8BD /* Pods-MyTasks-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyTasks-resources.sh"; sourceTree = "<group>"; };
-		BA923EAEA5C4FFFFBC8E8843C6539702 /* MGSwipeTableCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeTableCell.m; path = MGSwipeTableCell/MGSwipeTableCell.m; sourceTree = "<group>"; };
-		C51D3A4F58F86E518A67A3F3318A5ED0 /* MGSwipeTableCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MGSwipeTableCell.xcconfig; sourceTree = "<group>"; };
-		CA859C4ED79F1339EAFA84D8A82C06B5 /* MGSwipeTableCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeTableCell.h; path = MGSwipeTableCell/MGSwipeTableCell.h; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D9CB35DFBB35E354C08AE1296274D69E /* MGSwipeTableCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MGSwipeTableCell-dummy.m"; sourceTree = "<group>"; };
+		BDFC9634841FA170B7A9A24A0A3B30B7 /* JYGraphPoint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JYGraphPoint.m; path = JYGraphViewDemoProject/JYGraphViewDemoProject/JYGraphPoint.m; sourceTree = "<group>"; };
+		BECFB49A9E1DD8910968A1CBF6E9067C /* BEMPermanentPopupView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMPermanentPopupView.h; path = Classes/BEMPermanentPopupView.h; sourceTree = "<group>"; };
+		C509CC00F4F6CBC9E918C1C19E85C47F /* JYGraphView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JYGraphView-dummy.m"; sourceTree = "<group>"; };
+		C6760A8B0F528BAD28436E43508EAFBC /* JYGraphView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JYGraphView.h; path = JYGraphViewDemoProject/JYGraphViewDemoProject/JYGraphView.h; sourceTree = "<group>"; };
+		CE795136AA8A52BB55BA165ABDE179C0 /* BEMPermanentPopupView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMPermanentPopupView.m; path = Classes/BEMPermanentPopupView.m; sourceTree = "<group>"; };
+		CEB1C11948B9BBD6529421F36B90DEE1 /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMSimpleLineGraphView.h; path = Classes/BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
+		D46938E46774976AC69DB08EFACA61AE /* libMGSwipeTableCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMGSwipeTableCell.a; path = libMGSwipeTableCell.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8D2C3C81F0232066831EF6F371255CD /* BEMCircle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMCircle.m; path = Classes/BEMCircle.m; sourceTree = "<group>"; };
+		DC11F91594928070E73A600F5E022937 /* JYGraphView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JYGraphView.m; path = JYGraphViewDemoProject/JYGraphViewDemoProject/JYGraphView.m; sourceTree = "<group>"; };
+		DD3EC6BEA35D85C60987C38804381C13 /* MGSwipeButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeButton.h; path = MGSwipeTableCell/MGSwipeButton.h; sourceTree = "<group>"; };
+		E15BBE5059B37927848408D46C4BAEC6 /* MGSwipeButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeButton.m; path = MGSwipeTableCell/MGSwipeButton.m; sourceTree = "<group>"; };
+		ED280FEE0C55D7E8B419842D53B8603D /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMSimpleLineGraphView.m; path = Classes/BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
+		EE4A60461C2CDF227C9C2BC72A4B5934 /* libJYGraphView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJYGraphView.a; path = libJYGraphView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22E9F0EEE8FD98093687D3D2B1F2CD4 /* BEMAverageLine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMAverageLine.h; path = Classes/BEMAverageLine.h; sourceTree = "<group>"; };
 		FEBB62F1188183A390634ED970636339 /* Pods-MyTasks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyTasks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A416129FD9357EDAB628A67D6F930151 /* Frameworks */ = {
+		2F88CD661E68BF84F949F2E96D7ADC75 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A2FAEE0D4C8299A6C1179A4C17BFD5D /* Foundation.framework in Frameworks */,
+				53025A424539BFB9F57B47DE5572AEEF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9E70861FCEB4F88AA3EDEF894D8FBC9 /* Frameworks */ = {
+		45A2DD77D52671B9D582F69CE617DE03 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA7858FD0E9F489F2045B9BD691A105A /* Foundation.framework in Frameworks */,
+				D5C0A6209B3F54071227ED407510E76A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D154E1CEEA236B276947B6CC1BE4CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C4174CE6682E4C139FC28C6C7A7970 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98150E30A89D5325FB16D9662280ACC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D6B2732DAC3A9110264BD02093CB9C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C19A6D19227F5CEB0ED49234021FF69 /* BEMSimpleLineGraph */ = {
+			isa = PBXGroup;
+			children = (
+				F22E9F0EEE8FD98093687D3D2B1F2CD4 /* BEMAverageLine.h */,
+				2E42D2034F2BFB94EA964A7E9784D3CD /* BEMAverageLine.m */,
+				191108FF7AC6D6E75F50CDDCD20DFC3B /* BEMCircle.h */,
+				D8D2C3C81F0232066831EF6F371255CD /* BEMCircle.m */,
+				5804F32551BF719D48D8864297A7B4BF /* BEMLine.h */,
+				8E5D516FBACB05331AE92C391413B673 /* BEMLine.m */,
+				BECFB49A9E1DD8910968A1CBF6E9067C /* BEMPermanentPopupView.h */,
+				CE795136AA8A52BB55BA165ABDE179C0 /* BEMPermanentPopupView.m */,
+				CEB1C11948B9BBD6529421F36B90DEE1 /* BEMSimpleLineGraphView.h */,
+				ED280FEE0C55D7E8B419842D53B8603D /* BEMSimpleLineGraphView.m */,
+				AC6050E688797CDDD167E5685E5F3D2F /* Support Files */,
+			);
+			name = BEMSimpleLineGraph;
+			path = BEMSimpleLineGraph;
+			sourceTree = "<group>";
+		};
+		1352F437AFDFC762A815BEEB5EDF9F9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C19A6D19227F5CEB0ED49234021FF69 /* BEMSimpleLineGraph */,
+				B8410FCCDC9400C29BE22F65C554CD2C /* JYGraphView */,
+				C7FF70A68CFA8948A11CD0F0CCC3DABB /* MGSwipeTableCell */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1B4FA7F6E99FFD3F926E78C347EC04DF /* Pods-MyTasks */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,35 +182,37 @@
 			path = "Target Support Files/Pods-MyTasks";
 			sourceTree = "<group>";
 		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+		3505105EBB301D5AB2F4361200577D00 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+				3093F19BAB5AD583A993C64C7EAC4976 /* JYGraphView.xcconfig */,
+				C509CC00F4F6CBC9E918C1C19E85C47F /* JYGraphView-dummy.m */,
+				70698B6159DBBF2DE874ECF24045627B /* JYGraphView-prefix.pch */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/JYGraphView";
 			sourceTree = "<group>";
 		};
-		42AD7B0ADC9EF8A060DB56EBC5CC3035 /* Support Files */ = {
+		42FCF6A83FE6A7ABA92BEE5911D5AEF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C51D3A4F58F86E518A67A3F3318A5ED0 /* MGSwipeTableCell.xcconfig */,
-				D9CB35DFBB35E354C08AE1296274D69E /* MGSwipeTableCell-dummy.m */,
-				54E6590A1C83254E44DAD862184EE3F0 /* MGSwipeTableCell-prefix.pch */,
+				0EB936933FEA7B0AB23150E5949ED4A4 /* libBEMSimpleLineGraph.a */,
+				EE4A60461C2CDF227C9C2BC72A4B5934 /* libJYGraphView.a */,
+				D46938E46774976AC69DB08EFACA61AE /* libMGSwipeTableCell.a */,
+				8842CA00E7D08A291BD1EFDE9EF8482A /* libPods-MyTasks.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66058F58ADE374A1B28E89C6F1896609 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				28D3389605E9C863EFF2FFC99A1F9BDB /* MGSwipeTableCell.xcconfig */,
+				ADEE8DEB7285E40279D791EB6610F40C /* MGSwipeTableCell-dummy.m */,
+				289D2EFC25A2EE707BDDFDA418FA6C6B /* MGSwipeTableCell-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MGSwipeTableCell";
-			sourceTree = "<group>";
-		};
-		76E2F83B30B23F6E07B49C21636ECFAF /* MGSwipeTableCell */ = {
-			isa = PBXGroup;
-			children = (
-				74A736648428FBA6B1B9CDF790D44D92 /* MGSwipeButton.h */,
-				98E0C5123199A67D47DA40878E8D065D /* MGSwipeButton.m */,
-				CA859C4ED79F1339EAFA84D8A82C06B5 /* MGSwipeTableCell.h */,
-				BA923EAEA5C4FFFFBC8E8843C6539702 /* MGSwipeTableCell.m */,
-				42AD7B0ADC9EF8A060DB56EBC5CC3035 /* Support Files */,
-			);
-			path = MGSwipeTableCell;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -119,18 +220,55 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				EDEF8146E41CB40591E3EE21384C8AC6 /* Pods */,
-				F3E66E73E219C7052AF2C684F209F476 /* Products */,
+				1352F437AFDFC762A815BEEB5EDF9F9E /* Pods */,
+				42FCF6A83FE6A7ABA92BEE5911D5AEF7 /* Products */,
 				CCE5D57645BDB0ABA65C8B2DA378049B /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		AC6050E688797CDDD167E5685E5F3D2F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2749E57F85B07AFBBE14E85D99739275 /* BEMSimpleLineGraph.xcconfig */,
+				1AE21B429A66B18617848E5340743333 /* BEMSimpleLineGraph-dummy.m */,
+				6981B8F3651D943A2A89937D6AED5513 /* BEMSimpleLineGraph-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BEMSimpleLineGraph";
+			sourceTree = "<group>";
+		};
+		B8410FCCDC9400C29BE22F65C554CD2C /* JYGraphView */ = {
+			isa = PBXGroup;
+			children = (
+				9C5C1B46A90536E3DE25F7184FB7DB05 /* JYGraphPoint.h */,
+				BDFC9634841FA170B7A9A24A0A3B30B7 /* JYGraphPoint.m */,
+				C6760A8B0F528BAD28436E43508EAFBC /* JYGraphView.h */,
+				DC11F91594928070E73A600F5E022937 /* JYGraphView.m */,
+				3505105EBB301D5AB2F4361200577D00 /* Support Files */,
+			);
+			name = JYGraphView;
+			path = JYGraphView;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7FF70A68CFA8948A11CD0F0CCC3DABB /* MGSwipeTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				DD3EC6BEA35D85C60987C38804381C13 /* MGSwipeButton.h */,
+				E15BBE5059B37927848408D46C4BAEC6 /* MGSwipeButton.m */,
+				4AAEA64577709157E74D561A2654EC31 /* MGSwipeTableCell.h */,
+				AE55D1C964CCB31097EDEFB5E838A493 /* MGSwipeTableCell.m */,
+				66058F58ADE374A1B28E89C6F1896609 /* Support Files */,
+			);
+			name = MGSwipeTableCell;
+			path = MGSwipeTableCell;
 			sourceTree = "<group>";
 		};
 		CCE5D57645BDB0ABA65C8B2DA378049B /* Targets Support Files */ = {
@@ -141,45 +279,74 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		EDEF8146E41CB40591E3EE21384C8AC6 /* Pods */ = {
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				76E2F83B30B23F6E07B49C21636ECFAF /* MGSwipeTableCell */,
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		F3E66E73E219C7052AF2C684F209F476 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0FB1DAA2E863F06F9BB727508397DB8A /* libMGSwipeTableCell.a */,
-				72A5E3EDDF4E6B2C3F0A26660B17E67A /* libPods-MyTasks.a */,
-			);
-			name = Products;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		42C640E956052BC19BEA53F680E98AFA /* Headers */ = {
+		50FFEF2D3E167FE36CAE1417AA8021CA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C591574031C5736D5717DAE572FC359 /* MGSwipeButton.h in Headers */,
-				CFE557E5D4945FFFC747CA9C6F07B74D /* MGSwipeTableCell.h in Headers */,
+				45E321B940E640855F9BD8FE01AB2B45 /* JYGraphPoint.h in Headers */,
+				D7917C62BF6774A604055CE3B1642FBC /* JYGraphView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC450C39358125858247E8A76C26C25 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C729E1EA0EA97AB45B866C9AF21301 /* BEMAverageLine.h in Headers */,
+				E1CDB62E948DFB819A89EEB26FAEBED8 /* BEMCircle.h in Headers */,
+				4850AF5F4CA6F0AF6D019E81C8736EB2 /* BEMLine.h in Headers */,
+				5449C7A9E6C4A0BAF7F8953C38AFB375 /* BEMPermanentPopupView.h in Headers */,
+				867815EEDD60DBF7C1A91DCA2C452653 /* BEMSimpleLineGraphView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C64AE51AB7747B12C2C9311531FB7F1D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A0C42E7148852D211F6014C4B05C96 /* MGSwipeButton.h in Headers */,
+				F47CC8CFF26A311ADE7987B50729EDEE /* MGSwipeTableCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8C463CD491D989B457394A7AA95384BC /* MGSwipeTableCell */ = {
+		2072D1DF5BFD9E8B5826A6936EED91A9 /* BEMSimpleLineGraph */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A8B27F02A10D0E2B6D204B097EF2104 /* Build configuration list for PBXNativeTarget "MGSwipeTableCell" */;
+			buildConfigurationList = 3214A3693D405BD3650E7EEBB20C94D7 /* Build configuration list for PBXNativeTarget "BEMSimpleLineGraph" */;
 			buildPhases = (
-				A9B53C8F39C5CDA29C9F3248145DA578 /* Sources */,
-				A416129FD9357EDAB628A67D6F930151 /* Frameworks */,
-				42C640E956052BC19BEA53F680E98AFA /* Headers */,
+				B655767A17E3085DBE322D7B8E94B1D1 /* Sources */,
+				C8D154E1CEEA236B276947B6CC1BE4CF /* Frameworks */,
+				BBC450C39358125858247E8A76C26C25 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BEMSimpleLineGraph;
+			productName = BEMSimpleLineGraph;
+			productReference = 0EB936933FEA7B0AB23150E5949ED4A4 /* libBEMSimpleLineGraph.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		43AFBF4F2CD231A7499E3B7813A16837 /* MGSwipeTableCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFE982675D04C334946ED5FFBE6800FE /* Build configuration list for PBXNativeTarget "MGSwipeTableCell" */;
+			buildPhases = (
+				23DC3FE76D27F2AE373BD2F6D360ADDA /* Sources */,
+				2F88CD661E68BF84F949F2E96D7ADC75 /* Frameworks */,
+				C64AE51AB7747B12C2C9311531FB7F1D /* Headers */,
 			);
 			buildRules = (
 			);
@@ -187,24 +354,43 @@
 			);
 			name = MGSwipeTableCell;
 			productName = MGSwipeTableCell;
-			productReference = 0FB1DAA2E863F06F9BB727508397DB8A /* libMGSwipeTableCell.a */;
+			productReference = D46938E46774976AC69DB08EFACA61AE /* libMGSwipeTableCell.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		C281B5498686C370D1B525D056552B56 /* Pods-MyTasks */ = {
+		CD663DF4610CCBB6FDEEFC9856F8F0CA /* Pods-MyTasks */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCF33A9F2995051C514AA8234C6FF485 /* Build configuration list for PBXNativeTarget "Pods-MyTasks" */;
+			buildConfigurationList = DE5F799FD7A92A5AF82A94A03E61C5DE /* Build configuration list for PBXNativeTarget "Pods-MyTasks" */;
 			buildPhases = (
-				129407AE1E9BAEA34B723D8F192F900A /* Sources */,
-				B9E70861FCEB4F88AA3EDEF894D8FBC9 /* Frameworks */,
+				40741DAF9F92E8A01D9361019BAF0F58 /* Sources */,
+				45A2DD77D52671B9D582F69CE617DE03 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0FF25D6C98EF4AF210618A12B1FDD612 /* PBXTargetDependency */,
+				118CBB349E0489374291436AAA6600E2 /* PBXTargetDependency */,
+				56D3A0C525EA26E949FD338B9DFF17F2 /* PBXTargetDependency */,
+				FE1F19F6A8FD32044430092218F5E950 /* PBXTargetDependency */,
 			);
 			name = "Pods-MyTasks";
 			productName = "Pods-MyTasks";
-			productReference = 72A5E3EDDF4E6B2C3F0A26660B17E67A /* libPods-MyTasks.a */;
+			productReference = 8842CA00E7D08A291BD1EFDE9EF8482A /* libPods-MyTasks.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DD303CE3EC4B5E86F8D14C5DD2464FDF /* JYGraphView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F282DDAB3487E920983E21C257EC5B4 /* Build configuration list for PBXNativeTarget "JYGraphView" */;
+			buildPhases = (
+				2AEB66FC0E80E52FB91E36A9B7578A21 /* Sources */,
+				C98150E30A89D5325FB16D9662280ACC /* Frameworks */,
+				50FFEF2D3E167FE36CAE1417AA8021CA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JYGraphView;
+			productName = JYGraphView;
+			productReference = EE4A60461C2CDF227C9C2BC72A4B5934 /* libJYGraphView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +399,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -224,52 +410,91 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = F3E66E73E219C7052AF2C684F209F476 /* Products */;
+			productRefGroup = 42FCF6A83FE6A7ABA92BEE5911D5AEF7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C463CD491D989B457394A7AA95384BC /* MGSwipeTableCell */,
-				C281B5498686C370D1B525D056552B56 /* Pods-MyTasks */,
+				2072D1DF5BFD9E8B5826A6936EED91A9 /* BEMSimpleLineGraph */,
+				DD303CE3EC4B5E86F8D14C5DD2464FDF /* JYGraphView */,
+				43AFBF4F2CD231A7499E3B7813A16837 /* MGSwipeTableCell */,
+				CD663DF4610CCBB6FDEEFC9856F8F0CA /* Pods-MyTasks */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		129407AE1E9BAEA34B723D8F192F900A /* Sources */ = {
+		23DC3FE76D27F2AE373BD2F6D360ADDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1647891DE6F4562B67B7CD4AD6F0B3E /* Pods-MyTasks-dummy.m in Sources */,
+				31F7C87CF21A10C5733C6B170501C43D /* MGSwipeButton.m in Sources */,
+				99BA83D0022A68864DC669BBB680928B /* MGSwipeTableCell-dummy.m in Sources */,
+				6509E74B78C608D91D517578A5902C54 /* MGSwipeTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9B53C8F39C5CDA29C9F3248145DA578 /* Sources */ = {
+		2AEB66FC0E80E52FB91E36A9B7578A21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				627C702143DC5871810C774521DF7D6D /* MGSwipeButton.m in Sources */,
-				6C6F002C4ACEDC5BF1FCCEAE4E47A48D /* MGSwipeTableCell-dummy.m in Sources */,
-				0965F532B1D323B1DD073186EB650607 /* MGSwipeTableCell.m in Sources */,
+				D436147F9A52832585AC0A4F155003E0 /* JYGraphPoint.m in Sources */,
+				C0C0F91F3C8F4E0B825441E1E385DC11 /* JYGraphView-dummy.m in Sources */,
+				E1C6FC011E7DBF2EDE14C09073F88282 /* JYGraphView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40741DAF9F92E8A01D9361019BAF0F58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B1F1EC42CDFB82378AF009322011B2B /* Pods-MyTasks-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B655767A17E3085DBE322D7B8E94B1D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF987E16E146ACC52EA930F005835981 /* BEMAverageLine.m in Sources */,
+				A9C3D307358C2999F57EE7618D819C26 /* BEMCircle.m in Sources */,
+				1656E4B979886F4721143BD5FBF009BA /* BEMLine.m in Sources */,
+				F9D31053190166EB68C4015A91E01E2C /* BEMPermanentPopupView.m in Sources */,
+				CFAB562865885A2260B53B6966C6A5EA /* BEMSimpleLineGraph-dummy.m in Sources */,
+				C4EC6A8E94207C5B17FC1E5F74178DB7 /* BEMSimpleLineGraphView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0FF25D6C98EF4AF210618A12B1FDD612 /* PBXTargetDependency */ = {
+		118CBB349E0489374291436AAA6600E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BEMSimpleLineGraph;
+			target = 2072D1DF5BFD9E8B5826A6936EED91A9 /* BEMSimpleLineGraph */;
+			targetProxy = 5D55ED732461BD40D38697D8C745E47D /* PBXContainerItemProxy */;
+		};
+		56D3A0C525EA26E949FD338B9DFF17F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JYGraphView;
+			target = DD303CE3EC4B5E86F8D14C5DD2464FDF /* JYGraphView */;
+			targetProxy = 8FFE579BDBCDF501638FD4A918BE5414 /* PBXContainerItemProxy */;
+		};
+		FE1F19F6A8FD32044430092218F5E950 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MGSwipeTableCell;
-			target = 8C463CD491D989B457394A7AA95384BC /* MGSwipeTableCell */;
-			targetProxy = E223867371A016045758619E63FE95CB /* PBXContainerItemProxy */;
+			target = 43AFBF4F2CD231A7499E3B7813A16837 /* MGSwipeTableCell */;
+			targetProxy = 5AEAE2AD3788516332B81BDFDD759708 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2CCCD9EA418B84D15DC8053E605A0E85 /* Release */ = {
+		09441B648674DCB1CFCCD43ABF651D9F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C51D3A4F58F86E518A67A3F3318A5ED0 /* MGSwipeTableCell.xcconfig */;
+			baseConfigurationReference = 28D3389605E9C863EFF2FFC99A1F9BDB /* MGSwipeTableCell.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -283,35 +508,16 @@
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
-		3513515D748E6E39E3227A74BBF1FD75 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A628196A8BDD1DC41FC04434B36F3CA8 /* Pods-MyTasks.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
+		157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -319,12 +525,16 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -339,17 +549,163 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */ = {
+		52F8665A11AFCEF323980228E499F1B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3093F19BAB5AD583A993C64C7EAC4976 /* JYGraphView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JYGraphView/JYGraphView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+		93592D25E5EB8A0D6DCD89D245A3DF77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2749E57F85B07AFBBE14E85D99739275 /* BEMSimpleLineGraph.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BEMSimpleLineGraph/BEMSimpleLineGraph-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+		9557E9C6E925CA331EDA6594D39C9456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2749E57F85B07AFBBE14E85D99739275 /* BEMSimpleLineGraph.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BEMSimpleLineGraph/BEMSimpleLineGraph-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		B184B26D2FE8D6CC9C5357A34B944B30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28D3389605E9C863EFF2FFC99A1F9BDB /* MGSwipeTableCell.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MGSwipeTableCell/MGSwipeTableCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		BAE1DD0E0D0CBC142055F1340D88C11F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A628196A8BDD1DC41FC04434B36F3CA8 /* Pods-MyTasks.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+		C893792740B29990D431866D35EAAC2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEBB62F1188183A390634ED970636339 /* Pods-MyTasks.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		D7B1487F48E36BAD2CEF0AFCA4908B67 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -357,12 +713,16 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -382,21 +742,24 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		A07301CCA7DF806E7A1418B350B0C8C3 /* Debug */ = {
+		E6562692AF3687043C23E6616AC89F5E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C51D3A4F58F86E518A67A3F3318A5ED0 /* MGSwipeTableCell.xcconfig */;
+			baseConfigurationReference = 3093F19BAB5AD583A993C64C7EAC4976 /* JYGraphView.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MGSwipeTableCell/MGSwipeTableCell-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				GCC_PREFIX_HEADER = "Target Support Files/JYGraphView/JYGraphView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -405,27 +768,7 @@
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		FF78C710246CCCD31A8383759FE5B0F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEBB62F1188183A390634ED970636339 /* Pods-MyTasks.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -435,26 +778,44 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */,
-				3FA451D268613890FA8A5A03801E11D5 /* Release */,
+				D7B1487F48E36BAD2CEF0AFCA4908B67 /* Debug */,
+				157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A8B27F02A10D0E2B6D204B097EF2104 /* Build configuration list for PBXNativeTarget "MGSwipeTableCell" */ = {
+		3214A3693D405BD3650E7EEBB20C94D7 /* Build configuration list for PBXNativeTarget "BEMSimpleLineGraph" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A07301CCA7DF806E7A1418B350B0C8C3 /* Debug */,
-				2CCCD9EA418B84D15DC8053E605A0E85 /* Release */,
+				9557E9C6E925CA331EDA6594D39C9456 /* Debug */,
+				93592D25E5EB8A0D6DCD89D245A3DF77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCF33A9F2995051C514AA8234C6FF485 /* Build configuration list for PBXNativeTarget "Pods-MyTasks" */ = {
+		8F282DDAB3487E920983E21C257EC5B4 /* Build configuration list for PBXNativeTarget "JYGraphView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FF78C710246CCCD31A8383759FE5B0F5 /* Debug */,
-				3513515D748E6E39E3227A74BBF1FD75 /* Release */,
+				E6562692AF3687043C23E6616AC89F5E /* Debug */,
+				52F8665A11AFCEF323980228E499F1B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE5F799FD7A92A5AF82A94A03E61C5DE /* Build configuration list for PBXNativeTarget "Pods-MyTasks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C893792740B29990D431866D35EAAC2C /* Debug */,
+				BAE1DD0E0D0CBC142055F1340D88C11F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFE982675D04C334946ED5FFBE6800FE /* Build configuration list for PBXNativeTarget "MGSwipeTableCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B184B26D2FE8D6CC9C5357A34B944B30 /* Debug */,
+				09441B648674DCB1CFCCD43ABF651D9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

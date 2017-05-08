@@ -15,11 +15,15 @@
 #import "FolderCell.h"
 #import "MTFolder.h"
 #import "MTTask.h"
+#import "DataManager.h"
+#import "Folder+CoreDataProperties.h"
+#import "Folder+CoreDataClass.h"
 
 @interface MTHomeViewController ()<UITabBarControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
 @property (weak, nonatomic) IBOutlet UILabel *emptyLabel;
+@property (strong, nonatomic) NSArray *folders;
 
 @end
 
@@ -28,8 +32,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.emptyLabel.hidden = !([MTTasksHolder holder].folders.count == 0);
+    self.folders = [DataManager getFolders];
     [self.homeTableView reloadData];
+    self.emptyLabel.hidden = !(self.folders.count == 0);
 }
 
 - (void)viewDidLoad {
@@ -64,7 +69,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [MTTasksHolder holder].folders.count;
+    return self.folders.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -92,8 +97,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FolderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FolderCell"];
     
-    MTFolder *folder = [MTTasksHolder holder].folders[indexPath.row];
-    cell.titleLabel.text = folder.title;
+    Folder *folder = self.folders[indexPath.row];
+    cell.titleLabel.text = folder.name;
     cell.countLabel.text = [NSString stringWithFormat:@"%lu tasks", (unsigned long)folder.tasks.count];
 
     cell.rightButtons = @[[MGSwipeButton buttonWithTitle:@"Remove" icon:[UIImage imageNamed:@"check.png"] backgroundColor:[UIColor redColor]]];
@@ -103,14 +108,12 @@
     //cell.leftExpansion.fillOnTrigger = YES;
     
     return cell;
-    
-    return cell;
 }
 
 #pragma mark - UITableView Delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"FoldersToTasksSegue" sender:[MTTasksHolder holder].folders[indexPath.row]];
+    [self performSegueWithIdentifier:@"FoldersToTasksSegue" sender:self.folders[indexPath.row]];
 }
 
 - (IBAction)pressNewTaskButton:(id)sender {
@@ -125,7 +128,8 @@
      }];
     
     UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [[MTTasksHolder holder] addNewFolder:alertController.textFields.lastObject.text];
+        [DataManager createFolder:alertController.textFields.lastObject.text];
+        self.folders = [DataManager getFolders];
         self.emptyLabel.hidden = !([MTTasksHolder holder].folders.count == 0);
         [self.homeTableView reloadData];
     }];
@@ -141,7 +145,10 @@
     CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.homeTableView];
     NSIndexPath *indexPath = [self.homeTableView indexPathForRowAtPoint:buttonPosition];
     
-    [[MTTasksHolder holder] removeFolder:(int)indexPath.row];
+    [DataManager removeFolder:self.folders[indexPath.row]];
+    self.folders = [DataManager getFolders];
+//    [self.homeTableView reloadData];
+    
     [self.homeTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     self.emptyLabel.hidden = !([MTTasksHolder holder].folders.count == 0);
 }

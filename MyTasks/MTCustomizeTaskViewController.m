@@ -36,9 +36,10 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    self.titleTextField.text = self.task.title;
+    self.titleTextField.text = self.task.name;
     self.descriptionsTextView.text = self.task.descriptions;
-    [self.datePicker setDate:self.task.deadlineDate];
+    
+    [self.datePicker setDate:self.task.date ? self.task.date: [NSDate date]];
 }
 
 #pragma mark Methods
@@ -71,10 +72,13 @@
 }
 
 - (IBAction)pressedDoneButton:(id)sender {
-    self.task.title = self.titleTextField.text;
+    self.task.name = self.titleTextField.text;
     self.task.descriptions = self.descriptionsTextView.text;
-    self.task.deadlineDate = self.datePicker.date;
-    self.task.priority = [NSNumber numberWithInt:1];
+    self.task.date = self.datePicker.date;
+    NSLog(@"%u", self.task.priority);
+    [self.task setPriority:[NSNumber numberWithInt:1]];// = INT32_C(1);
+    
+    [CoreDataStack.sharedStack saveContext];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"MTRefreshTasksNotification" object:nil];
     

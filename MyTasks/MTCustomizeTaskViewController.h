@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MTTask.h"
+#import "DataManager.h"
+#import "CoreDataStack.h"
 
 @interface MTCustomizeTaskViewController : UIViewController
 
-@property (strong, nonatomic) MTTask *task;
+@property (strong, nonatomic) Task *task;
 
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionsTextView;

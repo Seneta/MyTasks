@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BEMSimpleLineGraph.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JYGraphView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MGSwipeTableCell.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>8C463CD491D989B457394A7AA95384BC</key>
+		<key>2072D1DF5BFD9E8B5826A6936EED91A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C281B5498686C370D1B525D056552B56</key>
+		<key>43AFBF4F2CD231A7499E3B7813A16837</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD663DF4610CCBB6FDEEFC9856F8F0CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD303CE3EC4B5E86F8D14C5DD2464FDF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

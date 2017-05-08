@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		49CA37A43EF0C511E49D5010 /* libPods-MyTasks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3A9B90F22E9545ED973E53 /* libPods-MyTasks.a */; };
 		9510E10A1D8017770057295A /* MTTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9510E1091D8017770057295A /* MTTabBarViewController.m */; };
-		951EE1071DE5DD7700CD61EA /* DataBaseModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 951EE1051DE5DD7700CD61EA /* DataBaseModel.xcdatamodeld */; };
 		952C271B1D3E88FA000E0020 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 952C271A1D3E88FA000E0020 /* main.m */; };
 		952C271E1D3E88FA000E0020 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 952C271D1D3E88FA000E0020 /* AppDelegate.m */; };
 		952C27241D3E88FA000E0020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952C27221D3E88FA000E0020 /* Main.storyboard */; };
@@ -21,9 +20,19 @@
 		952C27531D3E8F3C000E0020 /* TaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 952C27521D3E8F3C000E0020 /* TaskCell.m */; };
 		953545911E30BE730047533C /* FolderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 953545901E30BE730047533C /* FolderCell.m */; };
 		953545941E30C0E30047533C /* MTFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 953545931E30C0E30047533C /* MTFolder.m */; };
+		958BCFB41EB643A500BB3EC4 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 958BCFB21EB643A500BB3EC4 /* Model.xcdatamodeld */; };
+		95B4F06E1EBF1EA700C6D4D6 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B4F06D1EBF1EA700C6D4D6 /* DataManager.m */; };
+		95B4F0711EBF1EBA00C6D4D6 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B4F0701EBF1EBA00C6D4D6 /* CoreDataStack.m */; };
+		95B4F07B1EBF3A6600C6D4D6 /* Task+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B4F0741EBF3A6600C6D4D6 /* Task+CoreDataClass.m */; };
+		95B4F07C1EBF3A6600C6D4D6 /* Task+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B4F0761EBF3A6600C6D4D6 /* Task+CoreDataProperties.m */; };
+		95B4F07D1EBF3A6600C6D4D6 /* Folder+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B4F0781EBF3A6600C6D4D6 /* Folder+CoreDataClass.m */; };
+		95B4F07E1EBF3A6600C6D4D6 /* Folder+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B4F07A1EBF3A6600C6D4D6 /* Folder+CoreDataProperties.m */; };
 		95C6565D1D82D60F0019231B /* MTCurrentTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C6565C1D82D60F0019231B /* MTCurrentTasksViewController.m */; };
 		95C656601D82F1370019231B /* MTCustomizeTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C6565F1D82F1370019231B /* MTCustomizeTaskViewController.m */; };
 		95C656631D82F4AB0019231B /* TasksHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C656621D82F4AB0019231B /* TasksHeaderCell.m */; };
+		95DE26181EBFA53100776A0E /* MTStaticticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE26171EBFA53100776A0E /* MTStaticticsViewController.m */; };
+		95DE261D1EC07F9300776A0E /* CompletedFolder+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE261A1EC07F9300776A0E /* CompletedFolder+CoreDataClass.m */; };
+		95DE261E1EC07F9300776A0E /* CompletedFolder+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DE261C1EC07F9300776A0E /* CompletedFolder+CoreDataProperties.m */; };
 		95E425C11D995D8500D1A46E /* MTTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E425C01D995D8500D1A46E /* MTTask.m */; };
 		95E425C41D995E1800D1A46E /* MTTasksHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E425C31D995E1800D1A46E /* MTTasksHolder.m */; };
 /* End PBXBuildFile section */
@@ -50,7 +59,6 @@
 		539148FB00A90B5D4BCD5D5A /* Pods-MyTasks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTasks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTasks/Pods-MyTasks.debug.xcconfig"; sourceTree = "<group>"; };
 		9510E1081D8017770057295A /* MTTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTabBarViewController.h; sourceTree = "<group>"; };
 		9510E1091D8017770057295A /* MTTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTabBarViewController.m; sourceTree = "<group>"; };
-		951EE1061DE5DD7700CD61EA /* DataBaseModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataBaseModel.xcdatamodel; sourceTree = "<group>"; };
 		952C27161D3E88FA000E0020 /* MyTasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		952C271A1D3E88FA000E0020 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		952C271C1D3E88FA000E0020 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,12 +81,31 @@
 		953545901E30BE730047533C /* FolderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderCell.m; sourceTree = "<group>"; };
 		953545921E30C0E30047533C /* MTFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTFolder.h; sourceTree = "<group>"; };
 		953545931E30C0E30047533C /* MTFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFolder.m; sourceTree = "<group>"; };
+		958BCFB31EB643A500BB3EC4 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		95B4F06C1EBF1EA700C6D4D6 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		95B4F06D1EBF1EA700C6D4D6 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		95B4F06F1EBF1EBA00C6D4D6 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		95B4F0701EBF1EBA00C6D4D6 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		95B4F0731EBF3A6600C6D4D6 /* Task+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Task+CoreDataClass.h"; sourceTree = "<group>"; };
+		95B4F0741EBF3A6600C6D4D6 /* Task+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Task+CoreDataClass.m"; sourceTree = "<group>"; };
+		95B4F0751EBF3A6600C6D4D6 /* Task+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Task+CoreDataProperties.h"; sourceTree = "<group>"; };
+		95B4F0761EBF3A6600C6D4D6 /* Task+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Task+CoreDataProperties.m"; sourceTree = "<group>"; };
+		95B4F0771EBF3A6600C6D4D6 /* Folder+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Folder+CoreDataClass.h"; sourceTree = "<group>"; };
+		95B4F0781EBF3A6600C6D4D6 /* Folder+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Folder+CoreDataClass.m"; sourceTree = "<group>"; };
+		95B4F0791EBF3A6600C6D4D6 /* Folder+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Folder+CoreDataProperties.h"; sourceTree = "<group>"; };
+		95B4F07A1EBF3A6600C6D4D6 /* Folder+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Folder+CoreDataProperties.m"; sourceTree = "<group>"; };
 		95C6565B1D82D60F0019231B /* MTCurrentTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCurrentTasksViewController.h; sourceTree = "<group>"; };
 		95C6565C1D82D60F0019231B /* MTCurrentTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCurrentTasksViewController.m; sourceTree = "<group>"; };
 		95C6565E1D82F1370019231B /* MTCustomizeTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCustomizeTaskViewController.h; sourceTree = "<group>"; };
 		95C6565F1D82F1370019231B /* MTCustomizeTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCustomizeTaskViewController.m; sourceTree = "<group>"; };
 		95C656611D82F4AB0019231B /* TasksHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksHeaderCell.h; sourceTree = "<group>"; };
 		95C656621D82F4AB0019231B /* TasksHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksHeaderCell.m; sourceTree = "<group>"; };
+		95DE26161EBFA53100776A0E /* MTStaticticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStaticticsViewController.h; sourceTree = "<group>"; };
+		95DE26171EBFA53100776A0E /* MTStaticticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStaticticsViewController.m; sourceTree = "<group>"; };
+		95DE26191EC07F9300776A0E /* CompletedFolder+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CompletedFolder+CoreDataClass.h"; sourceTree = "<group>"; };
+		95DE261A1EC07F9300776A0E /* CompletedFolder+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CompletedFolder+CoreDataClass.m"; sourceTree = "<group>"; };
+		95DE261B1EC07F9300776A0E /* CompletedFolder+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CompletedFolder+CoreDataProperties.h"; sourceTree = "<group>"; };
+		95DE261C1EC07F9300776A0E /* CompletedFolder+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CompletedFolder+CoreDataProperties.m"; sourceTree = "<group>"; };
 		95E425BF1D995D8500D1A46E /* MTTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTask.h; sourceTree = "<group>"; };
 		95E425C01D995D8500D1A46E /* MTTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTask.m; sourceTree = "<group>"; };
 		95E425C21D995E1800D1A46E /* MTTasksHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTasksHolder.h; sourceTree = "<group>"; };
@@ -159,6 +186,7 @@
 				952C27501D3E8F15000E0020 /* Cells */,
 				952C274C1D3E8A6B000E0020 /* ViewControllers */,
 				952C27191D3E88FA000E0020 /* Supporting Files */,
+				958BCFB21EB643A500BB3EC4 /* Model.xcdatamodeld */,
 			);
 			path = MyTasks;
 			sourceTree = "<group>";
@@ -172,7 +200,6 @@
 				952C272A1D3E88FA000E0020 /* Info.plist */,
 				952C27251D3E88FA000E0020 /* Assets.xcassets */,
 				952C271A1D3E88FA000E0020 /* main.m */,
-				951EE1051DE5DD7700CD61EA /* DataBaseModel.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -235,19 +262,45 @@
 				9510E1091D8017770057295A /* MTTabBarViewController.m */,
 				95C6565B1D82D60F0019231B /* MTCurrentTasksViewController.h */,
 				95C6565C1D82D60F0019231B /* MTCurrentTasksViewController.m */,
+				95DE26161EBFA53100776A0E /* MTStaticticsViewController.h */,
+				95DE26171EBFA53100776A0E /* MTStaticticsViewController.m */,
 			);
 			name = "Main VCs";
+			sourceTree = "<group>";
+		};
+		95B4F0721EBF349800C6D4D6 /* CoreDataClasses */ = {
+			isa = PBXGroup;
+			children = (
+				95DE26191EC07F9300776A0E /* CompletedFolder+CoreDataClass.h */,
+				95DE261A1EC07F9300776A0E /* CompletedFolder+CoreDataClass.m */,
+				95DE261B1EC07F9300776A0E /* CompletedFolder+CoreDataProperties.h */,
+				95DE261C1EC07F9300776A0E /* CompletedFolder+CoreDataProperties.m */,
+				95B4F0731EBF3A6600C6D4D6 /* Task+CoreDataClass.h */,
+				95B4F0741EBF3A6600C6D4D6 /* Task+CoreDataClass.m */,
+				95B4F0751EBF3A6600C6D4D6 /* Task+CoreDataProperties.h */,
+				95B4F0761EBF3A6600C6D4D6 /* Task+CoreDataProperties.m */,
+				95B4F0771EBF3A6600C6D4D6 /* Folder+CoreDataClass.h */,
+				95B4F0781EBF3A6600C6D4D6 /* Folder+CoreDataClass.m */,
+				95B4F0791EBF3A6600C6D4D6 /* Folder+CoreDataProperties.h */,
+				95B4F07A1EBF3A6600C6D4D6 /* Folder+CoreDataProperties.m */,
+			);
+			name = CoreDataClasses;
 			sourceTree = "<group>";
 		};
 		95E425BE1D995D5F00D1A46E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				95B4F0721EBF349800C6D4D6 /* CoreDataClasses */,
 				95E425BF1D995D8500D1A46E /* MTTask.h */,
 				95E425C01D995D8500D1A46E /* MTTask.m */,
 				95E425C21D995E1800D1A46E /* MTTasksHolder.h */,
 				95E425C31D995E1800D1A46E /* MTTasksHolder.m */,
 				953545921E30C0E30047533C /* MTFolder.h */,
 				953545931E30C0E30047533C /* MTFolder.m */,
+				95B4F06C1EBF1EA700C6D4D6 /* DataManager.h */,
+				95B4F06D1EBF1EA700C6D4D6 /* DataManager.m */,
+				95B4F06F1EBF1EBA00C6D4D6 /* CoreDataStack.h */,
+				95B4F0701EBF1EBA00C6D4D6 /* CoreDataStack.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -259,12 +312,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 952C27431D3E88FA000E0020 /* Build configuration list for PBXNativeTarget "MyTasks" */;
 			buildPhases = (
-				C6517B32D7460B9162B47E98 /* 📦 Check Pods Manifest.lock */,
+				C6517B32D7460B9162B47E98 /* [CP] Check Pods Manifest.lock */,
 				952C27121D3E88FA000E0020 /* Sources */,
 				952C27131D3E88FA000E0020 /* Frameworks */,
 				952C27141D3E88FA000E0020 /* Resources */,
-				70B58DE3B7BBBD4557401181 /* 📦 Embed Pods Frameworks */,
-				D5DEC2D0CD34B313AF3CCB0D /* 📦 Copy Pods Resources */,
+				70B58DE3B7BBBD4557401181 /* [CP] Embed Pods Frameworks */,
+				D5DEC2D0CD34B313AF3CCB0D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -382,14 +435,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		70B58DE3B7BBBD4557401181 /* 📦 Embed Pods Frameworks */ = {
+		70B58DE3B7BBBD4557401181 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,29 +450,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyTasks/Pods-MyTasks-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C6517B32D7460B9162B47E98 /* 📦 Check Pods Manifest.lock */ = {
+		C6517B32D7460B9162B47E98 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D5DEC2D0CD34B313AF3CCB0D /* 📦 Copy Pods Resources */ = {
+		D5DEC2D0CD34B313AF3CCB0D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,15 +490,24 @@
 				952C27531D3E8F3C000E0020 /* TaskCell.m in Sources */,
 				95E425C41D995E1800D1A46E /* MTTasksHolder.m in Sources */,
 				95C656601D82F1370019231B /* MTCustomizeTaskViewController.m in Sources */,
+				95B4F07D1EBF3A6600C6D4D6 /* Folder+CoreDataClass.m in Sources */,
+				958BCFB41EB643A500BB3EC4 /* Model.xcdatamodeld in Sources */,
 				9510E10A1D8017770057295A /* MTTabBarViewController.m in Sources */,
+				95B4F0711EBF1EBA00C6D4D6 /* CoreDataStack.m in Sources */,
+				95B4F07E1EBF3A6600C6D4D6 /* Folder+CoreDataProperties.m in Sources */,
+				95B4F07B1EBF3A6600C6D4D6 /* Task+CoreDataClass.m in Sources */,
 				953545941E30C0E30047533C /* MTFolder.m in Sources */,
 				95C656631D82F4AB0019231B /* TasksHeaderCell.m in Sources */,
 				95C6565D1D82D60F0019231B /* MTCurrentTasksViewController.m in Sources */,
 				952C271E1D3E88FA000E0020 /* AppDelegate.m in Sources */,
+				95DE261E1EC07F9300776A0E /* CompletedFolder+CoreDataProperties.m in Sources */,
+				95B4F06E1EBF1EA700C6D4D6 /* DataManager.m in Sources */,
 				952C274F1D3E8DFD000E0020 /* MTHomeViewController.m in Sources */,
 				95E425C11D995D8500D1A46E /* MTTask.m in Sources */,
-				951EE1071DE5DD7700CD61EA /* DataBaseModel.xcdatamodeld in Sources */,
+				95DE261D1EC07F9300776A0E /* CompletedFolder+CoreDataClass.m in Sources */,
 				952C271B1D3E88FA000E0020 /* main.m in Sources */,
+				95B4F07C1EBF3A6600C6D4D6 /* Task+CoreDataProperties.m in Sources */,
+				95DE26181EBFA53100776A0E /* MTStaticticsViewController.m in Sources */,
 				953545911E30BE730047533C /* FolderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +641,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -589,6 +652,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 539148FB00A90B5D4BCD5D5A /* Pods-MyTasks.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -606,6 +670,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FEB8921E834CD6F62B8701C /* Pods-MyTasks.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -707,13 +772,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		951EE1051DE5DD7700CD61EA /* DataBaseModel.xcdatamodeld */ = {
+		958BCFB21EB643A500BB3EC4 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				951EE1061DE5DD7700CD61EA /* DataBaseModel.xcdatamodel */,
+				958BCFB31EB643A500BB3EC4 /* Model.xcdatamodel */,
 			);
-			currentVersion = 951EE1061DE5DD7700CD61EA /* DataBaseModel.xcdatamodel */;
-			path = DataBaseModel.xcdatamodeld;
+			currentVersion = 958BCFB31EB643A500BB3EC4 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
